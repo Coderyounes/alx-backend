@@ -2,7 +2,7 @@
 """ Documentation """
 
 
-def index_range(page: int, page_size:int ) -> tuple:
+def index_range(page: int, page_size: int) -> tuple:
     """
     Calculate the start and end indices for a given page and page size.
 
