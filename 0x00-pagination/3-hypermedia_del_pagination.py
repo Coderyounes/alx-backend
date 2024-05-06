@@ -42,7 +42,7 @@ class Server:
     def get_hyper_index(self, index: int = 0, page_size: int = 10) -> dict:
         """Retrieves info about a page from a
         given index and with a specified size."""
-        assert isinstance(index, int) and index >= 0
+        assert isinstance(index, int) and index >= 0 and index is not None
 
         data = self.indexed_dataset()
         assert index <= max(data.keys())
