@@ -4,6 +4,9 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """
+        A class BasicCache inherent from BaseCaching
+    """
     def put(self, key, item):
         """
         Add an item to the cache.
@@ -12,7 +15,8 @@ class BasicCache(BaseCaching):
             key: The key of the item.
             item: The item to be added to the cache.
         """
-        self.cache_data.update({key: item})
+        if key is not None and item is not None:
+            self.cache_data.update({key: item})
 
     def get(self, key):
         """
