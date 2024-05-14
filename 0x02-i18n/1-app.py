@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-
+#!/usr/bin/env python3
+""" Class as Configuration for Babel extension """
 from flask import Flask, render_template
 from flask_babel import Babel
 
@@ -8,6 +8,9 @@ babel = Babel(app)
 
 
 class Config:
+    """
+        Babel Configuration Class
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
@@ -18,6 +21,9 @@ app.config.from_object(Config)
 
 @app.route('/')
 def hello():
+    """
+        index route
+    """
     return render_template('1-index.html')
 
 
