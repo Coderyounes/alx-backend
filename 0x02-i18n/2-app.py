@@ -20,7 +20,7 @@ app.config.from_object(Config)
 
 
 @babel.localselector
-def get_locale():
+def get_locale() -> str:
     """
         get local from request header
     """
@@ -28,7 +28,7 @@ def get_locale():
 
 
 @app.route('/')
-def hello():
+def hello() -> str:
     """
         index route
     """
