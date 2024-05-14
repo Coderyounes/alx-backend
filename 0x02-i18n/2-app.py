@@ -19,7 +19,7 @@ class Config:
 app.config.from_object(Config)
 
 
-@babel.localselector
+@babel.localeselector
 def get_locale() -> str:
     """
         get local from request header
